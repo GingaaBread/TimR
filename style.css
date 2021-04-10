@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: 'Raleway', sans-serif;
+    --bmd-snd: rgb(116, 231, 193);
+    --bmd-trd: rgb(100, 168, 168);
+    --bmd-trd-dark: rgb(57, 98, 98);
+    --bmd-fth: rgb(206, 123, 15);
+    --bmd-fth-dark: rgb(105, 64, 10);
+}
+
+::selection {
+    color: var(--bmd-snd);
+}
+
+::placeholder {
+    color: var(--bmd-trd);
+}
+
+body {
+    color: #fff;
+    background-image: url(img/Nature.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    padding: 1rem;
+    font-size: 8rem;
+    background-color: rgba(10, 15, 13, 0.3);
+    text-shadow: 4px 4px 5px #111;
+}
+
+p, #countdown-numbers {
+    display: flex;
+}
+
+.big-font {
+    font-size: 4rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 2rem;
+}
+
+#countdown-numbers {
+    display: flex;
+    text-align: center;
+}
+
+#countdown-setup {
+    margin-top: 5rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+    border: 0.2rem solid white;
+}
+
+#countdown-setup:hover {
+    border-color: var(--bmd-snd);
+    color:var(--bmd-snd);
+}
+
+/* Countdown Creation */
+
+.hidden {
+    display: none;
+}
+
+.active {
+    display: flex;
+} 
+
+#countdown-popup-container {
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#countdown-popup {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    box-shadow: 3px 3px 3px 3px black;
+}
+
+#countdown-popup a {
+    position: absolute;
+    top: -1rem;
+    right: 1rem;
+
+    font-size: 5rem;
+    text-decoration: none;
+    color:darkslategrey;
+    transition: 0.3s;
+}
+
+#countdown-popup a:hover {
+    color: gray;
+    transform: rotate(45deg);
+}
+
+#countdown-popup h3 {
+    color: darkslategray;
+}
+
+h3::selection {
+    background-color: darkslategray;
+    color: white;
+}
+
+#countdown-popup form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+#countdown-popup input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;      
+    padding: 0.3rem 0.15rem;
+    width: 130%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#countdown-popup input[type="date"] {  
+    border: 2px solid var(--bmd-trd);
+    color: var(--bmd-trd);        
+}
+
+#countdown-popup input[type="text"] {
+    border: 2px solid var(--bmd-trd);
+    color: var(--bmd-trd);
+    text-align: center;
+}
+
+#countdown-popup input[type="submit"] {
+    position: absolute;   
+    bottom: 0;
+    width: 20%;
+    height: 2rem;
+
+    color: white;
+    background-color: var(--bmd-trd);
+    border: 2px solid var(--bmd-trd);
+    border-radius: 5px;
+    border-bottom-color: var(--bmd-trd-dark);
+    border-bottom-width: 3px;
+}
+
+#countdown-popup input[type="submit"]:hover {
+    height: 1.9rem;
+}
+
+#countdown-popup input[type="submit"]:focus-within {
+    outline: 0;
+    background-color: var(--bmd-fth);
+    border: 2px solid var(--bmd-fth);
+    border-bottom-color: var(--bmd-fth-dark);
+}
+
+#countdown-popup input[type="date"]:focus-within,  #countdown-popup input[type="text"]:focus-within {
+    outline: 0;
+    color: var(--bmd-fth);
+    border: 2px solid var(--bmd-fth);
+}
+
+#countdown-popup  a:focus-within {
+    outline: 0;
+    color: var(--bmd-fth);
+}

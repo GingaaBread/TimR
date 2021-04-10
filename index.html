@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>⌛ TaimR - Create Countdowns</title>
+        <meta charset="utf-8">
+        <link href="style.css" rel="stylesheet">
+        <script src="main.js" defer></script>
+    </head>
+
+    <body>
+        <h1 id="countdown-name">Your Countdown</h1>
+        <div id="countdown-numbers">
+            <div>
+                <p id="days" class="big-font">0</p> <span>Days</span>
+            </div>
+            <div>
+                <p id="hours" class="big-font">0</p> <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes" class="big-font">0</p><span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds" class="big-font">0</p> <span>Seconds</span>
+            </div>
+        </div>
+        <a role="button" href="#" id="countdown-setup">Set a Countdown</a>
+
+        <div id="countdown-popup-container" class="hidden">
+            <section id="countdown-popup">
+                <a href="#" role="button" id="cancel-setup">&times;</a>
+                <h3>Sure. When and how is it called?</h3>
+
+                <form id="countdown-setup-form">
+                    <input type="text" name="countdown-name" id="countdown-name-field" placeholder="Countdown Title" required>
+                    <input type="date" name="countdown-date" id="countdown-date" required>
+                    <input type="submit" id="submit-button" value="Set">
+                </form>                
+            </section>
+        </div>
+    </body>
+</html>
