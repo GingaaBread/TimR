@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>⌛ TaimR - Create Countdowns</title>
-        <meta charset="utf-8">
+        <title>⌛ TimR - Create Countdowns</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="TimR allows you to create individual countdowns for your personal events!">
+        
         <link href="style.css" rel="stylesheet">
         <script src="main.js" defer></script>
     </head>
 
     <body>
         <h1 id="countdown-name">Your Countdown</h1>
-        <div id="countdown-numbers">
+        <main id="countdown-numbers">
             <div>
                 <p id="days" class="big-font">0</p> <span>Days</span>
             </div>
@@ -22,7 +26,7 @@
             <div>
                 <p id="seconds" class="big-font">0</p> <span>Seconds</span>
             </div>
-        </div>
+        </main>
         <a role="button" href="#" id="countdown-setup">Set a Countdown</a>
 
         <div id="countdown-popup-container" class="hidden">
@@ -36,6 +40,11 @@
                     <input type="submit" id="submit-button" value="Set">
                 </form>                
             </section>
+        </div>
+
+        <div id="cookie-information-container">
+            <h1>This page is using cookies to store your event in your local storage</h1>
+            <a href="#" role="button" id="close-cookie-container">&otimes;</a>
         </div>
     </body>
 </html>

@@ -12,6 +12,8 @@ const countdownDate = document.getElementById("countdown-date");
 const countdownSetupForm = document.getElementById("countdown-setup-form");
 const countdownName = document.getElementById("countdown-name");
 const countdownNameField = document.getElementById("countdown-name-field");
+const cookieCloseButton = document.getElementById("close-cookie-container");
+const cookieInformationContainer = document.getElementById("cookie-information-container");
 
 // Compute the dates
 let destinationDate;
@@ -27,6 +29,11 @@ if (storageItem != null) {
 let storageName = localStorage.getItem("name");
 if (storageName != null) {
     countdownName.innerText = JSON.parse(storageName);
+}
+
+let storageCookieDecision = localStorage.getItem("hide-cookie-information");
+if (storageCookieDecision != null) {
+    document.body.removeChild(cookieInformationContainer);
 }
 
 // Display time
@@ -58,4 +65,9 @@ countdownSetupForm.addEventListener("submit", e => {
     localStorage.setItem("name", JSON.stringify(countdownNameField.value))
     setupContainer.classList.replace("active", "hidden");
     countActive = true;
+});
+
+cookieCloseButton.addEventListener("click", () => {
+    document.body.removeChild(cookieInformationContainer);
+    localStorage.setItem("hide-cookie-information", JSON.stringify(true));
 });

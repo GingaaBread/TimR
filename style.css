@@ -35,7 +35,7 @@ body {
     flex-direction: column;
 }
 
-h1 {
+#countdown-name {
     padding: 1rem;
     font-size: 8rem;
     background-color: rgba(10, 15, 13, 0.3);
@@ -195,4 +195,53 @@ h3::selection {
 #countdown-popup  a:focus-within {
     outline: 0;
     color: var(--bmd-fth);
+}
+
+/* Cookie Container */
+
+#cookie-information-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    padding: 1em;
+}
+
+#cookie-information-container h1 {
+    color: black;
+    text-align: center;
+}
+
+#cookie-information-container a {
+    font-size: 2em;
+    text-decoration: none;
+    position: absolute;
+    top: 0.3em;
+    right: 0.3em;
+    color: black;
+    transition: 0.3s;
+}
+
+#cookie-information-container a:hover {
+    transform: rotate(45deg);
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width: 700px) {
+    #countdown-name {
+        font-size: 6rem;
+    }    
+}
+
+@media only screen and (max-width: 1000px) {
+    #countdown-popup {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-height: 800px) {
+    #countdown-popup {
+        height: 50%;
+    }
 }
