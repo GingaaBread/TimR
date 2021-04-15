@@ -192,6 +192,10 @@ h3::selection {
     border: 2px solid var(--bmd-fth);
 }
 
+#countdown-popup input[type="text"]:focus-within::placeholder {
+    color: var(--bmd-fth);
+}
+
 #countdown-popup  a:focus-within {
     outline: 0;
     color: var(--bmd-fth);
